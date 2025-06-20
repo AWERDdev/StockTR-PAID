@@ -89,15 +89,5 @@ Created by a solo, self-taught developer (age 15).
 If you like this project, consider starring the repo or sharing your feedback!
 
 ---
-
-## 💡 Future Ideas
-
-- Add more stock analytics and charts
-- Social features (share watchlists, comments)
-- Deploy to Vercel/Heroku for live demo
-
----
-
 ## 🏁 License
 
-MIT
