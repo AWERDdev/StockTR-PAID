@@ -917,4 +917,4 @@ const handleAddToWatchlist = useCallback((symbol) => {
 
 ---
 
-**Next**: See [Frontend Examples](./frontend-examples.md) for practical usage examples and integration patterns. 
+**Next**: See [Frontend Examples](../frontend-examples.md) for practical usage examples and integration patterns. 

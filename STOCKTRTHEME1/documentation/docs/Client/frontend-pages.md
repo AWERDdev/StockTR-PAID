@@ -721,4 +721,4 @@ const pageConfig = {
 
 ---
 
-**Next**: See [Configuration Files](./configuration-files.md) for detailed configuration documentation. 
+**Next**: See [Configuration Files](../configuration-files.md) for detailed configuration documentation. 
