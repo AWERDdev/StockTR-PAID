@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+/* Base responsive typography and spacing */
+:root {
+  /* Color variables */
+  --bg-dark: #1f2937;
+  --bg-light: #ffffff;
+  --foregound-dark: #ffffff;
+  --foreground-light: #000000;
+  --primary-dark: #60a5fa;
+  --primary-light: #3b82f6;
+  --secondary-dark: #34d399;
+  --secondary-light: #10b981;
+  --accent-dark: #a78bfa;
+  --accent-light: #8b5cf6;
+  --muted-dark: #374151;
+  --muted-light: #f3f4f6;
+
+  /* Responsive font sizes - Smaller and cleaner */
+  --text-xs: clamp(0.625rem, 0.6rem + 0.125vw, 0.75rem);
+  --text-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-base: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --text-lg: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-xl: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --text-2xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-3xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --text-4xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+  --text-5xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+  --text-6xl: clamp(3rem, 2.5rem + 2.5vw, 3.75rem);
+
+  /* Responsive spacing */
+  --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+  --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+  --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --space-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --space-2xl: clamp(3rem, 2.4rem + 3vw, 4rem);
+
+  /* Responsive line heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body, html {
+  scrollbar-width: thin;
+  overflow-x: hidden;
+  background-color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive typography classes */
+.text-responsive-xs { font-size: var(--text-xs); }
+.text-responsive-sm { font-size: var(--text-sm); }
+.text-responsive-base { font-size: var(--text-base); }
+.text-responsive-lg { font-size: var(--text-lg); }
+.text-responsive-xl { font-size: var(--text-xl); }
+.text-responsive-2xl { font-size: var(--text-2xl); }
+.text-responsive-3xl { font-size: var(--text-3xl); }
+.text-responsive-4xl { font-size: var(--text-4xl); }
+.text-responsive-5xl { font-size: var(--text-5xl); }
+.text-responsive-6xl { font-size: var(--text-6xl); }
+
+/* Responsive spacing classes */
+.space-responsive-xs { margin: var(--space-xs); padding: var(--space-xs); }
+.space-responsive-sm { margin: var(--space-sm); padding: var(--space-sm); }
+.space-responsive-md { margin: var(--space-md); padding: var(--space-md); }
+.space-responsive-lg { margin: var(--space-lg); padding: var(--space-lg); }
+.space-responsive-xl { margin: var(--space-xl); padding: var(--space-xl); }
+.space-responsive-2xl { margin: var(--space-2xl); padding: var(--space-2xl); }
+
+/* Responsive container */
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+/* Responsive grid */
+.grid-responsive {
+  display: grid;
+  gap: clamp(1rem, 2vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+/* Responsive flexbox */
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+/* Button styles */
+button {
+  cursor: pointer;
+  font-size: var(--text-sm);
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  border-radius: clamp(0.25rem, 0.5vw, 0.5rem);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Form elements */
+input, textarea, select {
+  font-size: var(--text-base);
+  padding: clamp(0.5rem, 1vw, 0.75rem);
+  border-radius: clamp(0.25rem, 0.5vw, 0.5rem);
+}
+
+/* Card styles */
+.card-responsive {
+  background: var(--bg-dark);
+  border-radius: clamp(0.5rem, 1vw, 1rem);
+  padding: clamp(1rem, 2vw, 2rem);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header-responsive {
+  font-size: var(--text-2xl);
+  font-weight: bold;
+  margin-bottom: var(--space-md);
+}
+
+/* Subheader styles */
+.subheader-responsive {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+/* Body text styles */
+.body-text-responsive {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-sm);
+}
+
+/* Link styles */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* Auto-responsive text sizes for existing classes */
+.text-xs { font-size: var(--text-xs) !important; }
+.text-sm { font-size: var(--text-sm) !important; }
+.text-base { font-size: var(--text-base) !important; }
+.text-lg { font-size: var(--text-lg) !important; }
+.text-xl { font-size: var(--text-xl) !important; }
+.text-2xl { font-size: var(--text-2xl) !important; }
+.text-3xl { font-size: var(--text-3xl) !important; }
+.text-4xl { font-size: var(--text-4xl) !important; }
+.text-5xl { font-size: var(--text-5xl) !important; }
+.text-6xl { font-size: var(--text-6xl) !important; }
+
+/* Auto-responsive spacing for existing classes */
+.m-1 { margin: var(--space-xs) !important; }
+.m-2 { margin: var(--space-sm) !important; }
+.m-4 { margin: var(--space-md) !important; }
+.m-6 { margin: var(--space-lg) !important; }
+.m-8 { margin: var(--space-xl) !important; }
+
+.p-1 { padding: var(--space-xs) !important; }
+.p-2 { padding: var(--space-sm) !important; }
+.p-4 { padding: var(--space-md) !important; }
+.p-6 { padding: var(--space-lg) !important; }
+.p-8 { padding: var(--space-xl) !important; }
+
+/* Auto-responsive gaps */
+.gap-1 { gap: var(--space-xs) !important; }
+.gap-2 { gap: var(--space-sm) !important; }
+.gap-4 { gap: var(--space-md) !important; }
+.gap-6 { gap: var(--space-lg) !important; }
+.gap-8 { gap: var(--space-xl) !important; }
+
+/* Auto-responsive heights for form elements */
+.h-9 { height: clamp(2rem, 1.8rem + 1vw, 2.25rem) !important; }
+.h-10 { height: clamp(2.25rem, 2rem + 1.25vw, 2.5rem) !important; }
+.h-12 { height: clamp(2.75rem, 2.5rem + 1.25vw, 3rem) !important; }
+
+/* Mobile-first responsive breakpoints */
+@media (max-width: 640px) {
+  .container-responsive {
+    padding: 0 1rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: 1fr;
+  }
+  
+  .flex-responsive {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container-responsive {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-responsive {
+    padding: 0 2rem;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: var(--foregound-dark);
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
