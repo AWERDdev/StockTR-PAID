@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
     if (isLoading) {
         return (
-            <main className="h-screen w-screen text-[#ffffff] bg-gray-900 flex items-center justify-center">
+            <main className="h-screen w-screen text-[#333333] bg-white flex items-center justify-center">
                 <div>Loading...</div>
             </main>
         );
@@ -43,23 +43,23 @@ const App: React.FC = () => {
     }
 
     return (
-        <main className="min-h-screen w-screen text-[#ffffff] bg-gray-900">
+        <main className="min-h-screen w-screen text-[#333333] bg-white">
             <NavBarNoAUTH UserData={user} />
 
             <div className="container mx-auto px-4 py-8 space-y-8">
                 {/* Market Overview */}
-                <div className="bg-[hsl(0,0%,3%)] rounded-lg p-6 shadow-lg">
+                <div className="bg-gray-100 rounded-lg p-6 shadow-lg">
                     <h2 className="text-2xl font-bold mb-6">Market Overview</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div className="bg-[hsl(142,71%,25%)] rounded-lg p-4">
+                        <div className="bg-green-100 rounded-lg p-4">
                             <h3 className="text-xl font-bold">S&P 500</h3>
                             <p className="text-lg">+1.2%</p>
                         </div>
-                        <div className="bg-[hsl(0,84%,25%)] rounded-lg p-4">
+                        <div className="bg-red-100 rounded-lg p-4">
                             <h3 className="text-xl font-bold">NASDAQ</h3>
                             <p className="text-lg">-0.8%</p>
                         </div>
-                        <div className="bg-[hsl(217,91%,25%)] rounded-lg p-4">
+                        <div className="bg-blue-100 rounded-lg p-4">
                             <h3 className="text-xl font-bold">Dow Jones</h3>
                             <p className="text-lg">+0.5%</p>
                         </div>
@@ -75,17 +75,17 @@ const App: React.FC = () => {
                                 placeholder="Search stocks..."
                                 value={searchValue}
                                 onChange={handleSearch}
-                                className="w-full h-12 pl-4 pr-12 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-700 focus:border-blue-500 transition-all duration-200"
+                                className="w-full h-12 pl-4 pr-12 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#009688] border border-gray-300 focus:border-[#009688] transition-all duration-200"
                             />
-                            <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 hover:bg-gray-700 rounded transition-colors duration-200">
-                                <Search className="text-gray-400 hover:text-white w-4 h-4" />
+                            <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 hover:bg-gray-100 rounded transition-colors duration-200">
+                                <Search className="text-gray-500 hover:text-gray-700 w-4 h-4" />
                             </button>
                         </div>
                     </div>
                 </div>
 
                 {/* Stock List */}
-                <div className="bg-[hsl(0,0%,3%)] rounded-lg shadow-lg">
+                <div className="bg-gray-100 rounded-lg shadow-lg">
                     <div className="p-6">
                         <h2 className="text-2xl font-bold mb-4">Stock Data</h2>
                         <div className="space-y-4">
@@ -102,7 +102,7 @@ const App: React.FC = () => {
                                                 />
                                             ))
                                         ) : (
-                                            <div className="text-center py-8 text-gray-400">
+                                            <div className="text-center py-8 text-gray-500">
                                                 No stocks available at the moment.
                                             </div>
                                         )}
@@ -114,7 +114,7 @@ const App: React.FC = () => {
                 </div>
 
                 {/* Watchlist */}
-                <div className="bg-[hsl(0,0%,3%)] rounded-lg shadow-lg">
+                <div className="bg-gray-100 rounded-lg shadow-lg">
                     <div className="p-6">
                         <h2 className="text-2xl font-bold mb-4">Your Watchlist</h2>
                         <div className="space-y-4">
@@ -131,7 +131,7 @@ const App: React.FC = () => {
                                                 />
                                             ))
                                         ) : (
-                                            <div className="text-center py-8 text-gray-400">
+                                            <div className="text-center py-8 text-gray-500">
                                                 Your watchlist is empty. Add some stocks to get started!
                                             </div>
                                         )}

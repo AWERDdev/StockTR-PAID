@@ -9,7 +9,7 @@ const LogoutButton: React.FC<LogoutButtonProps> = ({handleLogout}) =>{
         <>
               <div className="BTN-container">
           <button 
-            className="bg-black rounded p-2 w-[5rem] text-[1rem]" 
+            className="bg-[#009688] hover:bg-[#00796b] text-white rounded p-2 w-[5rem] text-[1rem]" 
             onClick={handleLogout}
           >
             Logout

@@ -100,14 +100,14 @@ console.log('Current API_BASE_URL:', API_BASE_URL);
 
 return (
     <>
-        <main className="min-h-screen w-screen text-[#ffffff] dark:bg-gray-900">
+        <main className="min-h-screen w-screen text-[#333333] bg-white">
             <header>
                 <NavBarNoAUTH />
             </header>
             
             {/* Container with visible styling */}
             <div className="flex justify-center items-center py-8">
-                <div className="bg-gray-800 p-8 rounded-lg shadow-xl border border-white w-full max-w-2xl mx-4">
+                <div className="bg-gray-100 p-8 rounded-lg shadow-xl border border-gray-300 w-full max-w-2xl mx-4">
                     
                     {/* Form Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -119,7 +119,7 @@ return (
                                 name="Username"
                                 id='Username'
                                 placeholder="Username"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="input bg-white outline-1 outline-gray-400 rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
                                 onChange={(e) => setUsername(e.target.value)}
                             />
                             <label htmlFor="Username" className='text-[#ef4444] text-sm min-h-[1rem]'>{UsernameError}</label>
@@ -132,7 +132,7 @@ return (
                                 name="Name"
                                 id='Name'
                                 placeholder="Name"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="input bg-white outline-1 outline-gray-400 rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
                                 onChange={(e) => setname(e.target.value)}
                             />
                             <label htmlFor="Name" className='text-[#ef4444] text-sm min-h-[1rem]'>{nameError}</label>
@@ -145,7 +145,7 @@ return (
                                 name="email"
                                 id="Email"
                                 placeholder="Email"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="input bg-white outline-1 outline-gray-400 rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <label htmlFor="Email" className='text-[#ef4444] text-sm min-h-[1rem]'>{EmailError}</label>
@@ -158,7 +158,7 @@ return (
                                 name="password"
                                 id='Password'
                                 placeholder="Password"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="input bg-white outline-1 outline-gray-400 rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
                                 onChange={(e) => setpassword(e.target.value)}
                             />
                             <label htmlFor="Password" className='text-[#ef4444] text-sm min-h-[1rem]'>{PasswordError}</label>
@@ -168,7 +168,7 @@ return (
                     {/* Button */}
                     <div className='flex justify-center mt-8'>
                         <button
-                            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition-colors'
+                            className='bg-[#009688] hover:bg-[#00796b] text-white font-bold py-3 px-6 rounded transition-colors'
                             onClick={functionHandling}
                         >
                             Create Account

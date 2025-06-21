@@ -15,15 +15,15 @@ const NavBarNoAUTH = ({UserData }: NavBarNoAUTHProps) => {
   const { userIcon } = useUserIcon()
 
   return (
-    <header className="flex justify-between bg-[#1f2937]">
-      <div className="flex text-[#ffffff]">
+    <header className="flex justify-between bg-gray-100">
+      <div className="flex text-[#333333]">
         <TrendingUp className="h-[1.5rem] w-[1.5rem] sm:h-[3rem] sm:w-[3rem]"/>
         <h1 className="text-[1rem] font-bold sm:text-[2rem]">StockTrackerPro</h1>
       </div>
-      <div className="flex gap-5 mr-10 text-[#ffffff]">
+      <div className="flex gap-5 mr-10 text-[#333333]">
     
       <div className="UserInfo flex justify-center text-center items-center gap-2">
-      <Link href={'/Profile'} className="UserICON bg-gray-600 rounded-full text-center flex items-center justify-center overflow-hidden" style={{ width: 'clamp(40px, 4vw, 55px)', height: 'clamp(40px, 4vw, 55px)' }}>  
+      <Link href={'/Profile'} className="UserICON bg-gray-300 rounded-full text-center flex items-center justify-center overflow-hidden" style={{ width: 'clamp(40px, 4vw, 55px)', height: 'clamp(40px, 4vw, 55px)' }}>  
         {userIcon ? (
           <Image 
             src={userIcon} 

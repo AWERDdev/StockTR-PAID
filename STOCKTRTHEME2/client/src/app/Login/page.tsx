@@ -77,7 +77,7 @@ const LoginPage: React.FC = () => {
 
     return (
         <>
-            <main className="h-screen w-screen text-[#ffffff] dark:bg-gray-900">
+            <main className="h-screen w-screen text-[#333333] bg-white">
                 <header>
                     <NavBarNoAUTH />
                 </header>
@@ -85,7 +85,7 @@ const LoginPage: React.FC = () => {
                     <label className='text-[#ef4444] h-4'>{InvalidCredentialsError}</label>
                 </div>
                 <div className="flex justify-center items-center py-8">
-                <div className="bg-gray-800 p-8 rounded-lg shadow-xl border border-white w-full max-w-2xl mx-4">
+                <div className="bg-gray-100 p-8 rounded-lg shadow-xl border border-gray-300 w-full max-w-2xl mx-4">
                     
                     <div className="grid gap-1">
                         <label htmlFor="Email" className="form-label">Email</label>
@@ -94,7 +94,7 @@ const LoginPage: React.FC = () => {
                             name="email"
                             id="Email"
                             placeholder="Email"
-                            className="input bg-[#1f2937] outline-1 outline-black rounded h-9 p-2 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]" 
+                            className="input bg-white outline-1 outline-gray-400 rounded h-9 p-2 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]" 
                             onChange={(e) => setEmail(e.target.value)} 
                         />
                         <label htmlFor="Email" className='text-[#ef4444] h-4'>{EmailError}</label>
@@ -107,7 +107,7 @@ const LoginPage: React.FC = () => {
                             name="password"
                             id='Password'
                             placeholder="Password"
-                            className="input bg-[#1f2937] outline-1 outline-black rounded h-9 p-2 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]" 
+                            className="input bg-white outline-1 outline-gray-400 rounded h-9 p-2 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]" 
                             onChange={(e) => setpassword(e.target.value)} 
                         />
                         <label htmlFor="Password" className='text-[#ef4444] h-4'>{PasswordError}</label>
@@ -116,7 +116,7 @@ const LoginPage: React.FC = () => {
                 
                 <div className='flex justify-center mt-6'>
                     <button
-                        className='signupBTN bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+                        className='signupBTN bg-[#009688] hover:bg-[#00796b] text-white font-bold py-2 px-4 rounded'
                         onClick={functionHandling}
                     >
                         Login
