@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
     if (isLoading) {
         return (
-            <main className="h-screen w-screen text-[#ffffff] bg-gray-900 flex items-center justify-center">
+            <main className="h-screen w-screen text-[#e0e0e0] bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
                 <div>Loading...</div>
             </main>
         );
@@ -43,7 +43,7 @@ const App: React.FC = () => {
     }
 
     return (
-        <main className="min-h-screen w-screen text-[#ffffff] bg-gray-900">
+        <main className="min-h-screen w-screen text-[#e0e0e0] bg-gradient-to-br from-gray-900 via-gray-800 to-black">
             <NavBarNoAUTH UserData={user} />
 
             <div className="container mx-auto px-4 py-8 space-y-8">

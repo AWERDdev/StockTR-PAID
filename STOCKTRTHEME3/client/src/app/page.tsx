@@ -5,7 +5,7 @@ import NavBarNoAUTH2 from '@/components/NavBarNoAUTH2'
 const IntroPage:React.FC = () => {
 return (
 <>  
-<main className="h-screen w-screen text-[#e0e0e0] bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+<main className="min-h-screen w-screen text-[#e0e0e0] bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col">
 
   {/* Responsive Navigation - NavBar on larger screens, NavBarNoAUTH2 on small screens */}
   <div className="hidden sm:block">
@@ -15,7 +15,7 @@ return (
     <NavBarNoAUTH2 />
   </div>
      
-     <div className="pt-8">
+     <div className="flex-1 pt-8 px-4">
           <div className="flex justify-center text-center mb-6">
             <h1 className="text-[2rem] font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Welcome to StockTracker Pro</h1>
           </div>
@@ -58,7 +58,7 @@ return (
           </div>
         </div>
 
-     <div className="flex justify-center text-center">
+     <div className="flex justify-center text-center pb-8">
       <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-gray-900 font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 border border-blue-400/20">
         <Link href="/Login">Get Started</Link>
       </button>

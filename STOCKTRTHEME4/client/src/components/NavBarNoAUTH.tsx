@@ -15,7 +15,7 @@ const NavBarNoAUTH = ({UserData }: NavBarNoAUTHProps) => {
   const { userIcon } = useUserIcon()
 
   return (
-    <header className="flex justify-between bg-[#1f2937]">
+    <header className="flex justify-between ">
       <div className="flex text-[#ffffff]">
         <TrendingUp className="h-[1.5rem] w-[1.5rem] sm:h-[3rem] sm:w-[3rem]"/>
         <h1 className="text-[1rem] font-bold sm:text-[2rem]">StockTrackerPro</h1>

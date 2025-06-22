@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
     if (isLoading) {
         return (
-            <main className="h-screen w-screen text-[#ffffff] bg-gray-900 flex items-center justify-center">
+            <main className="h-screen w-screen text-[#f3f3f3] bg-gradient-to-br from-purple-900 via-indigo-900 to-black flex items-center justify-center">
                 <div>Loading...</div>
             </main>
         );
@@ -43,25 +43,25 @@ const App: React.FC = () => {
     }
 
     return (
-        <main className="min-h-screen w-screen text-[#ffffff] bg-gray-900">
+        <main className="min-h-screen w-screen text-[#f3f3f3] bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
             <NavBarNoAUTH UserData={user} />
 
             <div className="container mx-auto px-4 py-8 space-y-8">
                 {/* Market Overview */}
-                <div className="bg-[hsl(0,0%,3%)] rounded-lg p-6 shadow-lg">
+                <div className="bg-purple-900/60 backdrop-blur-sm rounded-2xl shadow-2xl border border-purple-500/30 p-6 hover:shadow-3xl hover:border-purple-400/50 transition-all duration-300">
                     <h2 className="text-2xl font-bold mb-6">Market Overview</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div className="bg-[hsl(142,71%,25%)] rounded-lg p-4">
+                        <div className="bg-gradient-to-br from-green-800/80 to-green-700/80 rounded-xl p-4 border border-green-500/50">
                             <h3 className="text-xl font-bold">S&P 500</h3>
-                            <p className="text-lg">+1.2%</p>
+                            <p className="text-lg text-green-400">+1.2%</p>
                         </div>
-                        <div className="bg-[hsl(0,84%,25%)] rounded-lg p-4">
+                        <div className="bg-gradient-to-br from-red-800/80 to-red-700/80 rounded-xl p-4 border border-red-500/50">
                             <h3 className="text-xl font-bold">NASDAQ</h3>
-                            <p className="text-lg">-0.8%</p>
+                            <p className="text-lg text-red-400">-0.8%</p>
                         </div>
-                        <div className="bg-[hsl(217,91%,25%)] rounded-lg p-4">
+                        <div className="bg-gradient-to-br from-blue-800/80 to-blue-700/80 rounded-xl p-4 border border-blue-500/50">
                             <h3 className="text-xl font-bold">Dow Jones</h3>
-                            <p className="text-lg">+0.5%</p>
+                            <p className="text-lg text-blue-400">+0.5%</p>
                         </div>
                     </div>
                 </div>
@@ -75,9 +75,9 @@ const App: React.FC = () => {
                                 placeholder="Search stocks..."
                                 value={searchValue}
                                 onChange={handleSearch}
-                                className="w-full h-12 pl-4 pr-12 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-700 focus:border-blue-500 transition-all duration-200"
+                                className="w-full h-12 pl-4 pr-12 rounded-xl bg-purple-800/80 backdrop-blur-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400 border border-purple-600 focus:border-green-400 transition-all duration-200"
                             />
-                            <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 hover:bg-gray-700 rounded transition-colors duration-200">
+                            <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 hover:bg-purple-700/80 rounded-lg transition-colors duration-200">
                                 <Search className="text-gray-400 hover:text-white w-4 h-4" />
                             </button>
                         </div>
@@ -85,7 +85,7 @@ const App: React.FC = () => {
                 </div>
 
                 {/* Stock List */}
-                <div className="bg-[hsl(0,0%,3%)] rounded-lg shadow-lg">
+                <div className="bg-purple-900/60 backdrop-blur-sm rounded-2xl shadow-2xl border border-purple-500/30 hover:shadow-3xl hover:border-purple-400/50 transition-all duration-300">
                     <div className="p-6">
                         <h2 className="text-2xl font-bold mb-4">Stock Data</h2>
                         <div className="space-y-4">
@@ -114,7 +114,7 @@ const App: React.FC = () => {
                 </div>
 
                 {/* Watchlist */}
-                <div className="bg-[hsl(0,0%,3%)] rounded-lg shadow-lg">
+                <div className="bg-purple-900/60 backdrop-blur-sm rounded-2xl shadow-2xl border border-purple-500/30 hover:shadow-3xl hover:border-purple-400/50 transition-all duration-300">
                     <div className="p-6">
                         <h2 className="text-2xl font-bold mb-4">Your Watchlist</h2>
                         <div className="space-y-4">

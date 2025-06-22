@@ -134,7 +134,7 @@ const Profile: React.FC = () => {
                 </div>
                 <div>
                 <button 
-                    className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 border border-green-500/20 w-full sm:w-auto"
+                    className=" bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform transition-all duration-200 border border-green-500/20 w-full sm:w-auto"
                     onClick={sendNewPassword}
                   >
                     Change Password
