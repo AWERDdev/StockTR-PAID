@@ -77,55 +77,62 @@ const LoginPage: React.FC = () => {
 
     return (
         <>
-            <main className="h-screen w-screen text-[#ffffff] dark:bg-gray-900">
+            <main className="h-screen w-screen text-[#e0e0e0] bg-[#1f2937]">
                 <header>
                     <NavBarNoAUTH />
                 </header>
                 <div className='flex justify-center text-center'>
-                    <label className='text-[#ef4444] h-4'>{InvalidCredentialsError}</label>
+                    <label className='text-red-400 h-4 font-medium'>{InvalidCredentialsError}</label>
                 </div>
                 <div className="flex justify-center items-center py-8">
-                <div className="bg-gray-800 p-8 rounded-lg shadow-xl border border-white w-full max-w-2xl mx-4">
+                <div className="bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-gray-600/50 w-full max-w-md mx-4 hover:shadow-3xl transition-all duration-300">
                     
-                    <div className="grid gap-1">
-                        <label htmlFor="Email" className="form-label">Email</label>
-                        <input 
-                            type="email"
-                            name="email"
-                            id="Email"
-                            placeholder="Email"
-                            className="input bg-[#1f2937] outline-1 outline-black rounded h-9 p-2 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]" 
-                            onChange={(e) => setEmail(e.target.value)} 
-                        />
-                        <label htmlFor="Email" className='text-[#ef4444] h-4'>{EmailError}</label>
+                    <div className="text-center mb-8">
+                        <h1 className="text-3xl font-bold  mb-2 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Welcome Back</h1>
+                        <p className="text-gray-300">Sign in to your account</p>
                     </div>
                     
-                    <div className="grid gap-1">
-                        <label htmlFor="Password" className="form-label">Password</label>
-                        <input 
-                            type="password"
-                            name="password"
-                            id='Password'
-                            placeholder="Password"
-                            className="input bg-[#1f2937] outline-1 outline-black rounded h-9 p-2 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]" 
-                            onChange={(e) => setpassword(e.target.value)} 
-                        />
-                        <label htmlFor="Password" className='text-[#ef4444] h-4'>{PasswordError}</label>
+                    <div className="space-y-6">
+                        <div className="space-y-2">
+                            <label htmlFor="Email" className="block text-sm font-medium text-gray-300">Email</label>
+                            <input 
+                                type="email"
+                                name="email"
+                                id="Email"
+                                placeholder="Enter your email"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700/80 backdrop-blur-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 hover:border-gray-500 transition-all duration-300 shadow-sm" 
+                                onChange={(e) => setEmail(e.target.value)} 
+                            />
+                            <label htmlFor="Email" className='text-red-400 text-sm font-medium'>{EmailError}</label>
+                        </div>
+                        
+                        <div className="space-y-2">
+                            <label htmlFor="Password" className="block text-sm font-medium text-gray-300">Password</label>
+                            <input 
+                                type="password"
+                                name="password"
+                                id='Password'
+                                placeholder="Enter your password"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700/80 backdrop-blur-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 hover:border-gray-500 transition-all duration-300 shadow-sm" 
+                                onChange={(e) => setpassword(e.target.value)} 
+                            />
+                            <label htmlFor="Password" className='text-red-400 text-sm font-medium'>{PasswordError}</label>
+                        </div>
                     </div>
               
                 
-                <div className='flex justify-center mt-6'>
+                <div className='flex justify-center mt-8'>
                     <button
-                        className='signupBTN bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+                        className='bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 border border-blue-400/30 w-full'
                         onClick={functionHandling}
                     >
-                        Login
+                        Sign In
                     </button>
                 </div>
                 </div>
                 </div>
                 <div className="link flex justify-center">
-                    <Link href="/signup">Dont have an account? Sign up</Link>
+                    <Link href="/signup" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">Dont have an account? Sign up</Link>
                 </div>  
             </main>
         </>

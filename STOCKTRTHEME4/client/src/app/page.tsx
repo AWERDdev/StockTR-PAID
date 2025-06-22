@@ -5,7 +5,7 @@ import NavBarNoAUTH2 from '@/components/NavBarNoAUTH2'
 const IntroPage:React.FC = () => {
 return (
 <>  
-<main className="h-screen w-screen text-[#ffffff] dark:bg-gray-900">
+<main className="h-screen w-screen text-[#f3f3f3] bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
 
   {/* Responsive Navigation - NavBar on larger screens, NavBarNoAUTH2 on small screens */}
   <div className="hidden sm:block">
@@ -17,45 +17,49 @@ return (
      
      <div className="pt-8">
           <div className="flex justify-center text-center mb-6">
-            <h1 className="text-[2rem] font-bold">Welcome to StockTracker Pro</h1>
+            <h1 className="text-[2rem] font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">Welcome to StockTracker Pro</h1>
           </div>
           
           <div className="flex justify-center text-center mb-8">
-            <p className="text-[1.5rem]">Your all-in-one solution for real-time stock market tracking and analysis.</p>
+            <p className="text-[1.5rem] text-gray-200">Your all-in-one solution for real-time stock market tracking and analysis.</p>
           </div>
 
-          <div className="bg-gray-800 rounded-lg shadow-lg p-6 mb-8 mx-4">
+          <div className="bg-purple-900/60 backdrop-blur-sm rounded-2xl shadow-2xl border border-purple-500/30 p-8 mb-8 mx-4 hover:shadow-3xl hover:border-purple-400/50 transition-all duration-300">
             <div className="flex justify-center text-center mb-6">
-              <h1 className="text-[#ffffff] text-[2rem]">Featured Stocks</h1>
+              <h1 className="text-[#f3f3f3] text-[2rem] font-bold">Featured Stocks</h1>
             </div>
 
         
-            <div className="grid sm:grid-cols-2  gap-4 text-center">
-              <div className="bg-gray-700 p-4 rounded-lg">
-                <div className="font-bold text-xl">AAPL</div>
-                <div className="text-green-500">+2.5%</div>
+            <div className="grid sm:grid-cols-2 gap-6 text-center">
+              <div className="bg-gradient-to-br from-purple-800/80 to-purple-700/80 p-6 rounded-xl shadow-lg border border-purple-500/50 hover:shadow-xl hover:scale-105 hover:border-green-400/70 transition-all duration-300">
+                <div className="font-bold text-2xl text-green-400 mb-2 drop-shadow-sm">AAPL</div>
+                <div className="text-green-400 font-semibold text-lg">+2.5%</div>
+                <div className="text-gray-300 text-sm mt-1">Apple Inc.</div>
               </div>
 
-              <div className="bg-gray-700 p-4 rounded-lg">
-                <div className="font-bold text-xl">GOOGL</div>
-                <div className="text-green-500">+2.5%</div>
+              <div className="bg-gradient-to-br from-purple-800/80 to-purple-700/80 p-6 rounded-xl shadow-lg border border-purple-500/50 hover:shadow-xl hover:scale-105 hover:border-cyan-400/70 transition-all duration-300">
+                <div className="font-bold text-2xl text-cyan-400 mb-2 drop-shadow-sm">GOOGL</div>
+                <div className="text-green-400 font-semibold text-lg">+1.8%</div>
+                <div className="text-gray-300 text-sm mt-1">Alphabet Inc.</div>
               </div>
 
-              <div className="bg-gray-700 p-4 rounded-lg">
-                <div className="font-bold text-xl">MSFT</div>
-                <div className="text-green-500">+2.5%</div>
+              <div className="bg-gradient-to-br from-purple-800/80 to-purple-700/80 p-6 rounded-xl shadow-lg border border-purple-500/50 hover:shadow-xl hover:scale-105 hover:border-pink-400/70 transition-all duration-300">
+                <div className="font-bold text-2xl text-pink-400 mb-2 drop-shadow-sm">MSFT</div>
+                <div className="text-green-400 font-semibold text-lg">+3.2%</div>
+                <div className="text-gray-300 text-sm mt-1">Microsoft Corp.</div>
               </div>
 
-              <div className="bg-gray-700 p-4 rounded-lg">
-                <div className="font-bold text-xl">AMZN</div>
-                <div className="text-green-500">+2.5%</div>
+              <div className="bg-gradient-to-br from-purple-800/80 to-purple-700/80 p-6 rounded-xl shadow-lg border border-purple-500/50 hover:shadow-xl hover:scale-105 hover:border-yellow-400/70 transition-all duration-300">
+                <div className="font-bold text-2xl text-yellow-400 mb-2 drop-shadow-sm">AMZN</div>
+                <div className="text-green-400 font-semibold text-lg">+1.5%</div>
+                <div className="text-gray-300 text-sm mt-1">Amazon.com Inc.</div>
               </div>
             </div>
           </div>
         </div>
 
      <div className="flex justify-center text-center">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-black font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 border border-green-400/30 drop-shadow-lg">
         <Link href="/Login">Get Started</Link>
       </button>
      </div>
