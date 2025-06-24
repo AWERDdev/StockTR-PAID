@@ -5,7 +5,7 @@ import NavBarNoAUTH2 from '@/components/NavBarNoAUTH2'
 const IntroPage:React.FC = () => {
 return (
 <>  
-<main className="h-screen w-screen text-[#e0e0e0] bg-[#1f2937]">
+<main className="h-screen w-screen text-[#e0e0e0]">
 
   {/* Responsive Navigation - NavBar on larger screens, NavBarNoAUTH2 on small screens */}
   <div className="hidden sm:block">
@@ -30,7 +30,7 @@ return (
             </div>
 
         
-            <div className="grid sm:grid-cols-2 gap-6 text-center">
+            <div className="grid sm:grid-cols-2 gap-6 text-center ">
               <div className="bg-gray-700/80 p-6 rounded-xl shadow-lg border border-blue-400/50 hover:shadow-xl hover:scale-105 transition-all duration-300">
                 <div className="font-bold text-2xl text-blue-400 mb-2">AAPL</div>
                 <div className="text-green-400 font-semibold text-lg">+2.5%</div>
@@ -58,7 +58,7 @@ return (
           </div>
         </div>
 
-     <div className="flex justify-center text-center">
+     <div className="flex justify-center text-center py-8 ">
       <button className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 border border-blue-400/30">
         <Link href="/Login">Get Started</Link>
       </button>

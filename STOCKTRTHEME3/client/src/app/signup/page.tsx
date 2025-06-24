@@ -100,7 +100,7 @@ console.log('Current API_BASE_URL:', API_BASE_URL);
 
 return (
     <>
-        <main className="min-h-screen w-screen text-[#ffffff] dark:bg-gray-900">
+        <main className="min-h-screen w-screen text-[#ffffff]  bg-gradient-to-br from-gray-900 via-gray-800 to-black">
             <header>
                 <NavBarNoAUTH />
             </header>
@@ -108,6 +108,10 @@ return (
             {/* Container with visible styling */}
             <div className="flex justify-center items-center py-8">
                 <div className="bg-gray-800 p-8 rounded-lg shadow-xl border border-white w-full max-w-2xl mx-4">
+                <div className="text-center mb-8">
+                        <h1 className="text-3xl font-bold text-gray-100 mb-2">Welcome to StockTR</h1>
+                        <p className="text-gray-300">Create your new account</p>
+                    </div>
                     
                     {/* Form Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -119,7 +123,7 @@ return (
                                 name="Username"
                                 id='Username'
                                 placeholder="Username"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700/80 backdrop-blur-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 hover:border-gray-500 transition-all duration-200 shadow-sm"
                                 onChange={(e) => setUsername(e.target.value)}
                             />
                             <label htmlFor="Username" className='text-[#ef4444] text-sm min-h-[1rem]'>{UsernameError}</label>
@@ -132,7 +136,7 @@ return (
                                 name="Name"
                                 id='Name'
                                 placeholder="Name"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700/80 backdrop-blur-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 hover:border-gray-500 transition-all duration-200 shadow-sm"
                                 onChange={(e) => setname(e.target.value)}
                             />
                             <label htmlFor="Name" className='text-[#ef4444] text-sm min-h-[1rem]'>{nameError}</label>
@@ -145,7 +149,7 @@ return (
                                 name="email"
                                 id="Email"
                                 placeholder="Email"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700/80 backdrop-blur-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 hover:border-gray-500 transition-all duration-200 shadow-sm"
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <label htmlFor="Email" className='text-[#ef4444] text-sm min-h-[1rem]'>{EmailError}</label>
@@ -158,7 +162,7 @@ return (
                                 name="password"
                                 id='Password'
                                 placeholder="Password"
-                                className="input bg-[#1f2937] outline-1 outline-black rounded h-10 px-3 focus:valid:outline-[#22c55e] invalid:outline-[#ef4444]"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-gray-600 bg-gray-700/80 backdrop-blur-sm text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 hover:border-gray-500 transition-all duration-200 shadow-sm"
                                 onChange={(e) => setpassword(e.target.value)}
                             />
                             <label htmlFor="Password" className='text-[#ef4444] text-sm min-h-[1rem]'>{PasswordError}</label>

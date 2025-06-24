@@ -23,7 +23,8 @@ const SignupPage:React.FC = ()=> {
         setUsername,
         setname,
         UsernameError,
-        nameError
+        nameError,
+        setUsernameError
     } = useInputHandlingSignup();
     
     
@@ -66,8 +67,14 @@ const SignupPage:React.FC = ()=> {
                 console.log("Data sent successfully");
                 return true;
             } else if (response.status === 409) {
-                console.log("Email already exists");
-                setEmailError(data.message);
+                // Set error on the correct field
+                if (data.field === 'email') {
+                  setEmailError(data.message);
+                } else if (data.field === 'username') {
+                  setUsernameError(data.message);
+                } else {
+                  setEmailError(data.message || 'An error occurred');
+                }
                 return false;
             } else {
                 console.log("Failed to send data");

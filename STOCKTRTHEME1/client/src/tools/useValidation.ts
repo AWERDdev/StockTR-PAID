@@ -84,7 +84,8 @@ export const useInputHandlingSignup = () => {
         setUsername,
         setname,
         UsernameError,
-        nameError
+        nameError,
+        setUsernameError
     };
 };
 

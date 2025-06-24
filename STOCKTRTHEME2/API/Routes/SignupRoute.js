@@ -11,11 +11,21 @@ router.post("/signup", async(req,res)=>{
         const {username, name, email, password} = req.body
         console.log("Got user data:", {username, name, email})
 
-        const existingUser = await User.findOne({ email: email });
-
-        if (existingUser) {
+        // Check for existing email
+        const existingEmail = await User.findOne({ email: email });
+        if (existingEmail) {
             return res.status(409).json({
-                message: "This email is already registered",
+                message: "Email already in use",
+                field: "email",
+                AUTH: false
+            });
+        }
+        // Check for existing username
+        const existingUsername = await User.findOne({ username: username });
+        if (existingUsername) {
+            return res.status(409).json({
+                message: "Username already in use",
+                field: "username",
                 AUTH: false
             });
         }
@@ -49,6 +59,18 @@ router.post("/signup", async(req,res)=>{
         })
     } catch(error) {
         console.log("Error details:", error)
+        // Handle duplicate key error from MongoDB
+        if (error.code === 11000) {
+            const field = Object.keys(error.keyPattern)[0];
+            let message = "Duplicate value";
+            if (field === "email") message = "Email already in use";
+            else if (field === "username") message = "Username already in use";
+            return res.status(409).json({
+                message,
+                field,
+                AUTH: false
+            });
+        }
         res.status(400).json({
             message: "Failed to signup please try again",
             AUTH: false
